@@ -1,0 +1,25 @@
+version: "3.4"
+
+services:
+  talonfsinterview:
+    volumes:
+      - .:/workspace
+    env_file:
+      - .env.local
+    image: talonfsinterview
+    build:
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: ["dev"]
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    env_file: .env.local
+    ports:
+      - 5432:5432

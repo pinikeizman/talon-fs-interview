@@ -1,0 +1,46 @@
+{
+  "name": "talon-fs-interview",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier src --write",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.14.11",
+    "@mui/material": "^5.14.11",
+    "@tanstack/react-table": "^8.10.3",
+    "next": "13.4.19",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "react": "latest",
+    "react-dom": "latest",
+    "sequelize": "^6.33.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/pg": "^8.10.3",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "3.0.3",
+    "sequelize-cli": "^6.6.1",
+    "typescript": "latest"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.--write": "prettier --write"
+  }
+}

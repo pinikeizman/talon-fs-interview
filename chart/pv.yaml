@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    meta.helm.sh/release-name: events
+    meta.helm.sh/release-namespace: default
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    type: local
+  name: events-postgres-pv
+  resourceVersion: "10782062"
+  selfLink: /api/v1/persistentvolumes/home-scheduler-pv
+  uid: b1944dba-e4ec-48b2-8cac-369787006860
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: home-scheduler-pvc
+    namespace: default
+    resourceVersion: "10782052"
+    uid: 08075eeb-d477-4820-98c6-e3bfed5c87e1
+  hostPath:
+    path: /data
+    type: ""
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  volumeMode: Filesystem
+status:
+  phase: Bound
